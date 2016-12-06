@@ -1,0 +1,10 @@
+logs
+*.log
+coverage
+node_modules
+.project
+/.idea/
+*.lock
+src/config.json
+build
+test
