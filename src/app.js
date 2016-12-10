@@ -6,10 +6,10 @@ var fedexAPI = require('shipping-fedex');
 var fedex = new fedexAPI({
     environment: 'sandbox', // or live
     debug: true,
-    key: 'CiKzaH4Qgobgxzqe',  //Ae0IBPQ38ym7HHkf
-    password: 'Y9zmwbKcaR9PPPuh02V7121az',    //Leicester@3524  // p1m6NAFTZHYVzmYsqrgQ408gF
-    account_number: '751281188',
-    meter_number: '109317923',
+    key: 'Ae0IBPQ38ym7HHkf',  //Ae0IBPQ38ym7HHkf  //Ae0IBPQ38ym7HHkf //CiKzaH4Qgobgxzqe
+    password: 'Am6EZbecQsKrZz9gfXTNihEYM',    // Am6EZbecQsKrZz9gfXTNihEYM  //Y9zmwbKcaR9PPPuh02V7121az
+    account_number: '510087526',  //510087526  //751281188
+    meter_number: '118721522', //118721522    //109317923
     imperial: true // set to false for metric
 });
 
