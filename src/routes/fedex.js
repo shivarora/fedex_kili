@@ -15,6 +15,7 @@ export  class FedexRoutes {
     checkRates(){
         return [
             (req, res) => {
+
                 return this._fedex.rates({
                         ReturnTransitAndCommit: true,
                         CarrierCodes: ['FDXE','FDXG'],
@@ -24,33 +25,34 @@ export  class FedexRoutes {
                             PackagingType: 'YOUR_PACKAGING',
                             Shipper: {
                                 Contact: {
-                                    PersonName: 'Jalebi bai',
-                                    CompanyName: 'kilimanajro',
-                                    PhoneNumber: '7448240672'
+                                    PersonName: 'KilimanjaroCoffeeCupCompany',
+                                    CompanyName: 'KilimanjaroCoffeeCupCompany',
+                                    PhoneNumber: ''
                                 },
                                 Address: {
                                     StreetLines: [
-                                        '1202 Chalet Ln'
+                                        '1947 San Pasqual St'
                                     ],
-                                    City: 'Harrison',
-                                    StateOrProvinceCode: 'AR',
-                                    PostalCode: '72601',
+                                    City: 'Pasadena',
+                                    StateOrProvinceCode: 'CA',
+                                    PostalCode: '91107',
                                     CountryCode: 'US'
                                 }
                             },
                             Recipient: {
                                 Contact: {
-                                    PersonName: 'shiv',
-                                    CompanyName: 'cromo',
-                                    PhoneNumber: '7448538041'
+                                    PersonName: req.query.uadd_recipient,
+                                    CompanyName: '',
+                                    PhoneNumber: req.query.uadd_phone
                                 },
                                 Address: {
                                     StreetLines: [
-                                        'welfors road'
+                                        req.query.uadd_address_01,
+                                        req.query.uadd_address_02
                                     ],
-                                    City: 'Charlotte',
-                                    StateOrProvinceCode: 'NC',
-                                    PostalCode: '28202',
+                                    City: req.query.uadd_city,
+                                    StateOrProvinceCode: req.query.uadd_county,
+                                    PostalCode: req.query.uadd_post_code,
                                     CountryCode: 'US',
                                     Residential: false
                                 }
@@ -59,7 +61,7 @@ export  class FedexRoutes {
                                 PaymentType: 'SENDER',
                                 Payor: {
                                     ResponsibleParty: {
-                                        AccountNumber: '510087526'
+                                        AccountNumber: '751281188'
                                     }
                                 }
                             },
@@ -142,33 +144,34 @@ export  class FedexRoutes {
                         PackagingType: 'YOUR_PACKAGING',
                         Shipper: {
                             Contact: {
-                                PersonName: 'Sender Name',
-                                CompanyName: 'Company Name',
-                                PhoneNumber: '5555555555'
+                                PersonName: 'KilimanjaroCoffeeCupCompany',
+                                CompanyName: 'KilimanjaroCoffeeCupCompany',
+                                PhoneNumber: '07448240672'
                             },
                             Address: {
                                 StreetLines: [
-                                    'Address Line 1'
+                                    '1947 San Pasqual St'
                                 ],
-                                City: 'Collierville',
-                                StateOrProvinceCode: 'TN',
-                                PostalCode: '38017',
+                                City: 'Pasadena',
+                                StateOrProvinceCode: 'CA',
+                                PostalCode: '91107',
                                 CountryCode: 'US'
                             }
                         },
                         Recipient: {
                             Contact: {
-                                PersonName: 'Recipient Name',
-                                CompanyName: 'Company Receipt Name',
-                                PhoneNumber: '5555555555'
+                                PersonName: req.query.uadd_recipient,
+                                CompanyName: '',
+                                PhoneNumber: req.query.uadd_phone
                             },
                             Address: {
                                 StreetLines: [
-                                    'Address Line 1'
+                                    req.query.uadd_address_01,
+                                    req.query.uadd_address_02,
                                 ],
-                                City: 'Charlotte',
-                                StateOrProvinceCode: 'NC',
-                                PostalCode: '28202',
+                                City: req.query.uadd_city,
+                                StateOrProvinceCode: req.query.uadd_county,
+                                PostalCode: req.query.uadd_post_code,
                                 CountryCode: 'US',
                                 Residential: false
                             }
