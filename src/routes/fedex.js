@@ -71,10 +71,10 @@ export  class FedexRoutes {
                                 GroupPackageCount: 1,
                                 Weight: {
                                     Units: 'LB',
-                                    Value: '30.0'
+                                    Value: '3.0'
                                 },
                                 Dimensions: {
-                                    Length: 108,
+                                    Length: 30,
                                     Width: 5,
                                     Height: 5,
                                     Units: 'IN'
@@ -195,10 +195,10 @@ export  class FedexRoutes {
                             GroupPackageCount: 1,
                             Weight: {
                                 Units: 'LB',
-                                Value: '30.0'
+                                Value: '3.0'
                             },
                             Dimensions: {
-                                Length: 108,
+                                Length: 30,
                                 Width: 5,
                                 Height: 5,
                                 Units: 'IN'
